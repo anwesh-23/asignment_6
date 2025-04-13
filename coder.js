@@ -11,12 +11,10 @@ function isPerfectSquare(num) {
 }
 
 function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+    let red = 150 + Math.round(Math.random()*100);
+    let green = 150 + Math.round(Math.random()*100);
+    let blue = 150 + Math.round(Math.random()*100);
+    return `rgb(${red},${green},${blue})`
 }
 
 const boxes = document.querySelectorAll('.box');
